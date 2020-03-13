@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>All your ToDoes in one Place!</h1>
+    <p class="lead">Manage your life with just a few clicks!</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+  
+            @if (Request.IsAuthenticated)
+            {
+                <text>
+                    Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
+                </text>
+            }
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
